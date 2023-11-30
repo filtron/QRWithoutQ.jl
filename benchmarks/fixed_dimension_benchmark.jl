@@ -93,7 +93,7 @@ function fixed_dimension_benchmark(T, ns, m)
     display(fig_allocs)
 
     save(joinpath(@__DIR__, "fixed_dim_times.pdf"), fig_times, pt_per_unit=1.0)
-    save(joinpath(@__DIR__,"fixed_dim_allocs.pdf"), fig_times, pt_per_unit=1.0)
+    save(joinpath(@__DIR__,"fixed_dim_allocs.pdf"), fig_allocs, pt_per_unit=1.0)
 
 
     return qr_results, qrwoq_results, fig_times, fig_allocs

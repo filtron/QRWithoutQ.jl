@@ -2,7 +2,7 @@
 function qrR!(A::AbstractMatrix{T}) where {T}
     m, n = size(A)
     n <= m || throw(
-        DimensionMismatch("A must have more rows than columns, received shape $((m, n))"),
+        DimensionMismatch("A must have more rows than columns, received size $((m, n))"),
     ) # easier to reason about
     qr!(A)
     Av = view(A, 1:n, 1:n)
